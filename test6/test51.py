@@ -8,10 +8,11 @@
 #係り受け解析とは文節の「修飾する」「修飾される」の関係を調べることです。
 
 import CaboCha
+
 def cabocha_japanese():
-	N = CaboCha.Parser()
-	for line in open("japanese.txt"):
-		m = N.parseTostring(line)
+	c = CaboCha.Parser("-f1")
+	for line in open("japanese_cabocha.txt"):
+		m = c.parseToString(line)
 		print m
 
 

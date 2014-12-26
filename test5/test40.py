@@ -19,7 +19,7 @@ for line in lines:
 	if "\t"in line:
 		tab_split = line.split("\t")
 		comma_split = tab_split[1].split(",")
-		dict[tab_split[0]] + " " + comma_split[6] + " " + comma_split[0] + " " + comma_split[1]] = tab_split[0]
+		dict[[tab_split[0]] + " " + comma_split[6] + " " + comma_split[0] + " " + comma_split[1]] = tab_split[0]
 	else:
 		break
 
