@@ -21,11 +21,11 @@ def make_dict():
 	#lambda <arg1>,<arg2>,<arg3>,<arg4>,<argN>:expressions
 	all_dict	=	defaultdict(lambda:0)
 	#全てのファイル数を計算する
-	N 			=	len(glob.glob('62_output_japanese_?.txt'))
-	for name in glob.glob('62_output_japanese_?.txt'):
+	N 			=	len(glob.glob('61_output_japanese_?.txt'))
+	for name in glob.glob('61_output_japanese_?.txt'):
 		#set([]):iterableから要素と取り込んだ、新しいsetもしくはfrozensetオブジェクトを返す
 		#iterableが指定されないならば、新しい空のsetが返されます
-		word_set=	set([])
+		ward_set=	set([])
 		for line in open(name):
 			ward_set.add(line.strip())
 			all_dict[line.strip()]	+=	1
@@ -41,5 +41,5 @@ def make_tf_idf():
 		print '%s\%.6f\t%d\t%d' % (word,(all_dict[word]*math.log(float(N)/i,2)),all_dict[word],i)
 
 if __name__ == '__main__':
-	all_dict,set_list,N = make_dict()
+	all_dict,set_list,N=make_dict()
 	make_tf_idf(all_dict,set_list,N)
