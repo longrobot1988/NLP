@@ -6,7 +6,6 @@
 から除外せよ。	
 """
 
-
 def sort_tf_idf():
 	import re
 	dict	=	{}

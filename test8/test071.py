@@ -1,6 +1,7 @@
 #!/usr/bin/python
 #-*-coding:utf-8-*-
-#2014/06/20 16:45:56 Shin Kanouchi
+#2014/06/10 15:43:57
+#Author:Guo Weilong
 """(71) ５つのファイル（英語のテキスト）にGENIA taggerを適用せよ．GENIA taggerは１文１行形式の入力を受け取るので，22のプログラムを再利用せよ．また，入力ファイルはgzipで圧縮されていることに注意せよ．"""
 import sys,re,glob
 from geniatagger import *
