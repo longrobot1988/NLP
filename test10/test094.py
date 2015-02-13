@@ -5,6 +5,7 @@
 #
 #created on: 2014/02/09
 #
+#記事のタイトル
 
 import xml.sax
 import xml.sax.handler
@@ -25,7 +26,7 @@ class printNameHandler(ContentHandler):
 	def characters(self, data):
 		if self.flag:
 			print data.encode("utf-8")
-			
+
 	def main(text):
 		parser = xml.sax.make_parser()
 		parser.setContentHandler(printNameHandler())
